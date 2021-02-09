@@ -1,7 +1,6 @@
 import { GET_CITY_INFO } from "./actions";
 
 const initialState = {
-  text: "123",
   cityInfo: {},
 };
 

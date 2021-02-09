@@ -1,25 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
 import { getCity } from "../redux/actions";
 
 const CitySearch = () => {
+  const [text, setText] = useState("");
   const dispatch = useDispatch();
-  const { text } = useSelector((state) => state.text);
 
-  const handleChange = (e) => {
-    dispatch(getCity(e.target.value.trim()));
+  const data = useSelector((state) => state.cityReducer.cityInfo);
+  console.log(data);
+
+  const handleSubmit = (e) => {
+    dispatch(getCity(text));
+    e.preventDefault();
   };
 
   return (
     <>
-      <input
-        className="search"
-        onChange={handleChange}
-        type="search"
-        value={text}
-        placeholder={"search"}
-      />
+      <form onSubmit={handleSubmit}>
+        <input
+          // className="search"
+          onChange={(e) => setText(e.target.value)}
+          type="search"
+          value={text}
+          placeholder={"search"}
+        />
+        <button type="submit">Click to submit</button>
+      </form>
+      <div></div>
     </>
   );
 };
