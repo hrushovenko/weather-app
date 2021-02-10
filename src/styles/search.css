@@ -1,0 +1,16 @@
+.search {
+  padding: 6px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.button {
+  margin-right: 15px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.4);
+  transition: all ease-in-out 0.2s;
+  border-bottom: 2px solid transparent;
+}

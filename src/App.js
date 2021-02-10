@@ -1,12 +1,10 @@
 import "./App.css";
-import Chart from "./components/Chart";
-import CitySearch from "./components/CitySearch";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div className="App">
-      <CitySearch />
-      <Chart />
+      <Home />
     </div>
   );
 }
